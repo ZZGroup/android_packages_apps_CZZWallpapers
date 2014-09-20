@@ -44,6 +44,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import com.crx.wapllpapers.R;
+
 public class wallpaper extends Activity implements AdapterView.OnItemSelectedListener,
         OnClickListener {
 
