@@ -18,10 +18,12 @@
     <string-array name="wallpapers" translatable="false">
         <item>wallpaper1</item>
         <item>wallpaper2</item>
+        <item>wallpaper3</item>
     </string-array>
 
     <string-array name="info" translatable="false">
         <item>Wallpaper1 - zodex</item>
         <item>Wallpaper2 - zodex</item>
+        <item>Wallpaper3 - zodex</item>
     </string-array>
 </resources>
