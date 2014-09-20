@@ -17,9 +17,11 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="wallpapers" translatable="false">
         <item>wallpaper1</item>
+        <item>wallpaper2</item>
     </string-array>
 
     <string-array name="info" translatable="false">
         <item>Wallpaper1 - zodex</item>
+        <item>Wallpaper2 - zodex</item>
     </string-array>
 </resources>
