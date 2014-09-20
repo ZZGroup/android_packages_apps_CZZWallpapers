@@ -16,6 +16,8 @@
 
 package com.crx.wallpapers;
 
+import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.WallpaperManager;
 import android.content.Context;
@@ -27,6 +29,7 @@ import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.AsyncTask;
 import android.util.Log;
@@ -44,9 +47,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import com.crx.wapllpapers.R;
+import com.crx.wallpapers.R;
 
-public class wallpaper extends Activity implements AdapterView.OnItemSelectedListener,
+@SuppressLint("NewApi") public class wallpaper extends Activity implements AdapterView.OnItemSelectedListener,
         OnClickListener {
 
     protected static final float WALLPAPER_SCREENS_SPAN = 2f;
@@ -128,7 +131,7 @@ public class wallpaper extends Activity implements AdapterView.OnItemSelectedLis
         mIsWallpaperSet = false;
     }
 
-    @Override
+    @SuppressLint("NewApi") @Override
     protected void onDestroy() {
         super.onDestroy();
         
@@ -138,19 +141,19 @@ public class wallpaper extends Activity implements AdapterView.OnItemSelectedLis
         }
     }
 
-    public void onItemSelected(AdapterView parent, View v, int position, long id) {
+    @SuppressLint("NewApi") public void onItemSelected(AdapterView parent, View v, int position, long id) {
         if (mLoader != null && mLoader.getStatus() != WallpaperLoader.Status.FINISHED) {
             mLoader.cancel();
         }
         mLoader = (WallpaperLoader) new WallpaperLoader().execute(position);
     }
 
-    protected boolean isScreenLarge(Resources res) {
+    @SuppressLint("NewApi") protected boolean isScreenLarge(Resources res) {
         Configuration config = res.getConfiguration();
         return config.smallestScreenWidthDp >= 720;
     }
 
-    protected Point getDefaultWallpaperSize(Resources res, WindowManager windowManager) {
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1) @SuppressLint("NewApi") protected Point getDefaultWallpaperSize(Resources res, WindowManager windowManager) {
         Point minDims = new Point();
         Point maxDims = new Point();
         windowManager.getDefaultDisplay().getCurrentSizeRange(minDims, maxDims);
@@ -247,7 +250,7 @@ public class wallpaper extends Activity implements AdapterView.OnItemSelectedLis
         cropTask.execute();
     }
 
-    protected void updateWallpaperDimensions(int width, int height) {
+    @SuppressLint("NewApi") protected void updateWallpaperDimensions(int width, int height) {
         SharedPreferences.Editor editor = mPrefs.edit();
         if (width != 0 && height != 0) {
             editor.putInt(WALLPAPER_WIDTH_KEY, width);
@@ -267,7 +270,7 @@ public class wallpaper extends Activity implements AdapterView.OnItemSelectedLis
         final Point defaultWallpaperSize = getDefaultWallpaperSize(res, windowManager);
 
         new Thread("suggestWallpaperDimension") {
-            public void run() {
+            @SuppressLint("NewApi") public void run() {
                 // If we have saved a wallpaper width/height, use that instead
                 int savedWidth = mPrefs.getInt(WALLPAPER_WIDTH_KEY, defaultWallpaperSize.x);
                 int savedHeight = mPrefs.getInt(WALLPAPER_HEIGHT_KEY, defaultWallpaperSize.y);
@@ -293,7 +296,7 @@ public class wallpaper extends Activity implements AdapterView.OnItemSelectedLis
     public void onNothingSelected(AdapterView parent) {
     }
 
-    private class ImageAdapter extends BaseAdapter {
+    @SuppressLint("NewApi") private class ImageAdapter extends BaseAdapter {
         private LayoutInflater mLayoutInflater;
 
         ImageAdapter(wallpaper context) {
@@ -312,7 +315,7 @@ public class wallpaper extends Activity implements AdapterView.OnItemSelectedLis
             return position;
         }
 
-        public View getView(int position, View convertView, ViewGroup parent) {
+        @SuppressLint("NewApi") public View getView(int position, View convertView, ViewGroup parent) {
             ImageView image;
 
             if (convertView == null) {
@@ -339,7 +342,7 @@ public class wallpaper extends Activity implements AdapterView.OnItemSelectedLis
         selectWallpaper(mGallery.getSelectedItemPosition());
     }
 
-    class WallpaperLoader extends AsyncTask<Integer, Void, Bitmap> {
+    @SuppressLint("NewApi") class WallpaperLoader extends AsyncTask<Integer, Void, Bitmap> {
         BitmapFactory.Options mOptions;
 
         WallpaperLoader() {
@@ -348,7 +351,7 @@ public class wallpaper extends Activity implements AdapterView.OnItemSelectedLis
             mOptions.inPreferredConfig = Bitmap.Config.ARGB_8888;            
         }
         
-        protected Bitmap doInBackground(Integer... params) {
+        @SuppressLint("NewApi") protected Bitmap doInBackground(Integer... params) {
             if (isCancelled()) return null;
             try {
                 return BitmapFactory.decodeResource(getResources(),
@@ -358,7 +361,7 @@ public class wallpaper extends Activity implements AdapterView.OnItemSelectedLis
             }            
         }
 
-        @Override
+        @SuppressLint("NewApi") @Override
         protected void onPostExecute(Bitmap b) {
             if (b == null) return;
 

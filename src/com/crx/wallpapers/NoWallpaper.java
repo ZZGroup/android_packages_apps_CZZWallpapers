@@ -16,7 +16,7 @@
 
 package com.crx.wallpapers;
 
-import com.crx.wapllpapers.R;
+import com.crx.wallpapers.R;
 
 import android.app.Activity;
 import android.app.WallpaperManager;
