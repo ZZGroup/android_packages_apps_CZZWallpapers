@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2013 The CyanogenMod Project
+     Copyright (C) 2014 CrystalPA Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -22,14 +22,16 @@
         <item>wallpaper4</item>
         <item>wallpaper5</item>
         <item>wallpaper6</item>
+        <item>wallpaper7</item>
     </string-array>
 
     <string-array name="info" translatable="false">
-        <item>Wallpaper1 - zodex</item>
-        <item>Wallpaper2 - zodex</item>
-        <item>Wallpaper3 - zodex</item>
-        <item>Wallpaper4 - zodex</item>
-        <item>Wallpaper5 - zodex</item>
-        <item>Wallpaper6 - zodex</item>
+        <item>CrystalPA 1 - Lava with supernova effect</item>
+        <item>CrystalPA 2 - Full lava design</item>
+        <item>CrystalPA 3 - Red waves</item>
+        <item>CrystalPA 4 - Pavement</item>
+        <item>CrystalPA 5 - White mosaic</item>
+        <item>CrystalPA 6 - Blue idea </item>
+        <item>CrystalPA 7 - Gray circles</item>
     </string-array>
 </resources>
