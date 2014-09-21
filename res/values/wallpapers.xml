@@ -23,6 +23,7 @@
         <item>wallpaper5</item>
         <item>wallpaper6</item>
         <item>wallpaper7</item>
+        <item>wallpaper8</item>
     </string-array>
 
     <string-array name="info" translatable="false">
@@ -33,5 +34,6 @@
         <item>CrystalPA 5 - White mosaic</item>
         <item>CrystalPA 6 - Blue idea </item>
         <item>CrystalPA 7 - Gray circles</item>
+        <item>CrystalPA 8 - X mosaic</item>
     </string-array>
 </resources>
