@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.crx.wallpapers;
+package com.zzg.wallpapers;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -47,7 +47,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import com.crx.wallpapers.R;
+import com.zzg.wallpapers.R;
 
 @SuppressLint("NewApi") public class wallpaper extends Activity implements AdapterView.OnItemSelectedListener,
         OnClickListener {

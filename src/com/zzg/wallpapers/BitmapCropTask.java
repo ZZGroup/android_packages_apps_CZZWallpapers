@@ -1,4 +1,4 @@
-package com.crx.wallpapers;
+package com.zzg.wallpapers;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;

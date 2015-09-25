@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2014 CrystalPA Project
+     Copyright (C) 2015 CrystalZZ Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,24 +16,16 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="wallpapers" translatable="false">
-        <item>wallpaper1</item>
-        <item>wallpaper2</item>
-        <item>wallpaper3</item>
-        <item>wallpaper4</item>
-        <item>wallpaper5</item>
-        <item>wallpaper6</item>
-        <item>wallpaper7</item>
-        <item>wallpaper8</item>
+        <item>czz_wallpaper1</item>
+        <item>czz_wallpaper2</item>
+        <item>czz_wallpaper3</item>
+        <item>czz_wallpaper4</item>
     </string-array>
 
     <string-array name="info" translatable="false">
-        <item>CrystalPA 1 - Lava with supernova effect</item>
-        <item>CrystalPA 2 - Full lava design</item>
-        <item>CrystalPA 3 - Red waves</item>
-        <item>CrystalPA 4 - Pavement</item>
-        <item>CrystalPA 5 - White mosaic</item>
-        <item>CrystalPA 6 - Blue idea </item>
-        <item>CrystalPA 7 - Gray circles</item>
-        <item>CrystalPA 8 - X mosaic</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
     </string-array>
 </resources>

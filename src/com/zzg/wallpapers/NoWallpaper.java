@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.crx.wallpapers;
+package com.zzg.wallpapers;
 
-import com.crx.wallpapers.R;
+import com.zzg.wallpapers.R;
 
 import android.app.Activity;
 import android.app.WallpaperManager;
